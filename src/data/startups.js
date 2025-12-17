@@ -48,7 +48,7 @@ import OneMg from "../assets/Onemg.svg";
 import CityMall from "../assets/CityMall.png";
 import CARS24 from "../assets/CARS24.png";
 import TheManCompany from "../assets/TheManCompany.png";
-import OfBusiness from "../assets/OfBusiness.jpg";
+import OfBusiness from "../assets/ofBusiness.jpg";
 import Spinny from "../assets/Spinny.png";
 import YellowMessenger from "../assets/YellowMessenger.svg";
 import Yulu from "../assets/Yulu.jpeg";
