@@ -7,15 +7,15 @@ export default function About() {
     {
       name: "Deepika Selvaraj",
       role: "Founder & Full Stack Developer",
-      education: "3rd Year B.Tech IT Student",
+      education: "B.Tech IT (Pursuing)",
       college: "Sri Shakthi Institute of Engineering and Technology",
       email: "studiesfor456@gmail.com",
       quote: "Building impactful digital experiences through data and design.",
     },
     {
       name: "Archana Gurusamy",
-      role: "Co-Founder & Full Stack Developer",
-      education: "3rd Year B.Tech IT Student",
+      role: "Founder & Full Stack Developer",
+      education: "B.Tech IT (Pursuing)",
       college: "Sri Shakthi Institute of Engineering and Technology",
       email: "archanagurusamy648@gmail.com",
       quote: "Turning startup data into meaningful economic insights.",
