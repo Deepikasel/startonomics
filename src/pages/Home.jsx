@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "../assets/image.png"; // your logo
+import WorldMap from "../components/WorldMap";
+
 
 export default function Home() {
   return (
@@ -128,6 +130,7 @@ export default function Home() {
         animate={{ y: [0, -15, 0], x: [0, -10, 0] }}
         transition={{ duration: 6, repeat: Infinity }}
       />
+      <WorldMap />
     </div>
   );
 }
