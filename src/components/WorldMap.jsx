@@ -6,9 +6,13 @@ import {
 import { motion } from "framer-motion";
 import MapTooltip from "./MapTooltip";
 import { asiaStartupData } from "../data/asiaStartupData";
+import startups from "../data/startups";
+import { getCountryCounts } from "../utils/getCountryCounts";
 
 const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+
+const countryCounts = getCountryCounts(startups);
 
 export default function WorldMap() {
   return (
@@ -41,37 +45,38 @@ export default function WorldMap() {
             height={500}
           >
             <Geographies geography={geoUrl}>
-              {({ geographies }) =>
-                geographies.map((geo) => {
-                  const country = geo.properties.name;
-                  const count = asiaStartupData[country];
+  {({ geographies }) =>
+    geographies.map((geo) => {
+      const countryName = geo.properties.name;
+      const count = countryCounts[countryName];
 
-                  return (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      data-tooltip-id="map-tooltip"
-                      data-tooltip-content={
-                        count
-                          ? `${country}: ${count} startups`
-                          : `${country}: No data`
-                      }
-                      fill={count ? "#22c55e" : "#e5e7eb"}
-                      stroke="#ffffff"
-                      style={{
-                        default: { outline: "none" },
-                        hover: {
-                          fill: "#16a34a",
-                          cursor: "pointer",
-                          outline: "none",
-                        },
-                        pressed: { outline: "none" },
-                      }}
-                    />
-                  );
-                })
-              }
-            </Geographies>
+      return (
+        <Geography
+          key={geo.rsmKey}
+          geography={geo}
+          fill={count ? "#22c55e" : "#e5e7eb"}
+          data-tooltip-id="map-tooltip"
+          data-tooltip-content={
+            count
+              ? `${countryName}: ${count} startups`
+              : `${countryName}: No startups listed`
+          }
+          stroke="#ffffff"
+          style={{
+            default: { outline: "none" },
+            hover: {
+              fill: "#16a34a",
+              cursor: "pointer",
+              outline: "none",
+            },
+            pressed: { outline: "none" },
+          }}
+        />
+      );
+    })
+  }
+</Geographies>
+
           </ComposableMap>
 
         </div>
