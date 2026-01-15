@@ -6,10 +6,12 @@ import StartupStory from "./pages/StartupStory";
 import EconomicInsights from "./pages/EconomicInsights";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <Router>
+      {/* 🌐 Global Navbar */}
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -22,6 +24,7 @@ export default function App() {
         >
           Startonomics
         </Link>
+
         <div className="flex gap-6 flex-wrap">
           {[
             { to: "/gallery", label: "Gallery" },
@@ -40,6 +43,7 @@ export default function App() {
         </div>
       </motion.nav>
 
+      {/* 📄 Page Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
@@ -48,6 +52,9 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      {/* 🧱 Global Footer */}
+      <Footer />
     </Router>
   );
 }
