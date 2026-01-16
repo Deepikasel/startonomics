@@ -111,10 +111,10 @@ The app will be available at:
 ## 👩‍💻 Team
 
 * **Deepika Selvaraj**
-* Mail: [studiesfor456@gmail.com](mailto:studiesfor456@gmail.com)
+   Mail: [studiesfor456@gmail.com](mailto:studiesfor456@gmail.com)
 
 * **Archana Gurusamy**
-* Mail: [archanagurusamy648@gmail.com](mailto:archanagurusamy648@gmail.com)
+   Mail: [archanagurusamy648@gmail.com](mailto:archanagurusamy648@gmail.com)
 
 ---
 
