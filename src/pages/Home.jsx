@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import logo from "../assets/image.png";
 import WorldMap from "../components/WorldMap";
-import AutoCarousel from "../components/AutoCarousel";
+import startupImpact from "../assets/startup-global-impact.png";
 
 
 export default function Home() {
@@ -69,10 +69,10 @@ export default function Home() {
 </section>
 
 
-      {/* ================= SECTION 2: GEOGRAPHIC INSIGHTS ================= */}
-<section className="w-full py-28 bg-white px-8">
+{/* ================= SECTION 2: GEOGRAPHIC INSIGHTS ================= */}
+<section className="w-full py-28 bg-white px-10">
 
-  {/* Centered Heading */}
+  {/* ===== Section Header (KEEP THIS ONLY) ===== */}
   <div className="text-center mb-20">
     <h2 className="text-4xl md:text-5xl font-extrabold text-green-800">
       Startup Ecosystem Across Asia
@@ -83,68 +83,122 @@ export default function Home() {
     </p>
   </div>
 
-  {/* Content Grid */}
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-stretch">
+  {/* ===== Map + Content (Same Height, No Divider Feel) ===== */}
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-stretch">
 
-    {/* Left: Map */}
-    <motion.div
-      initial={{ opacity: 0, x: -40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="flex justify-center items-center rounded-3xl shadow-2xl border border-gray-200 bg-gray-50 p-6 min-h-[400px]"
-    >
+    {/* LEFT → MAP */}
+    <div className="flex items-center justify-center h-full">
       <WorldMap />
-    </motion.div>
+    </div>
 
-    {/* Right: Text + CTA */}
-    <motion.div
-      initial={{ opacity: 0, x: 40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="flex flex-col justify-center space-y-6 p-6 bg-white rounded-3xl shadow-xl min-h-[400px]"
+    {/* RIGHT → CONTENT */}
+<div className="flex flex-col justify-center space-y-8">
+
+  <div>
+    <h3 className="text-2xl font-bold text-green-800 mb-3">
+      Economic Perspective
+    </h3>
+    <p className="text-gray-700 text-lg leading-relaxed">
+      Asia’s startup ecosystem reflects varying economic maturity,
+      regulatory policies, and access to venture capital across regions.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="text-2xl font-bold text-green-800 mb-3">
+      Regional Comparison
+    </h3>
+    <p className="text-gray-700 text-lg leading-relaxed">
+      Mapping startup concentration enables comparison between
+      established hubs and fast-growing emerging markets.
+    </p>
+  </div>
+
+  <div className="border-l-4 border-green-600 pl-6">
+    <p className="text-gray-800 text-lg font-medium">
+      Data-driven visualization helps understand how innovation
+      influences employment, investment, and long-term growth.
+    </p>
+  </div>
+
+  <div>
+    <Link
+      to="/gallery"
+      className="inline-block bg-green-600 hover:bg-green-700
+                 text-white px-10 py-3 rounded-full text-lg
+                 font-semibold transition transform hover:scale-105"
     >
-      <h3 className="text-3xl font-bold text-green-700">
-        Regional Innovation Footprint
-      </h3>
+      Explore Startups
+    </Link>
+  </div>
 
-      <p className="text-gray-700 leading-relaxed">
-        The Asian startup landscape reflects diverse economic maturity levels,
-        policy environments, and funding access.
-      </p>
-
-      <p className="text-gray-700 leading-relaxed">
-        This interactive map allows comparison of startup concentration
-        across countries, highlighting innovation hubs and rising ecosystems.
-      </p>
-
-      <Link
-        to="/gallery"
-        className="inline-block mt-4 bg-green-600 hover:bg-green-700
-                   text-white px-8 py-3 rounded-full font-semibold transition transform hover:scale-105"
-      >
-        Explore Startups 
-      </Link>
-    </motion.div>
+</div>
 
   </div>
 </section>
 
 
-    {/* ================= SECTION 3: INSIGHT CAROUSEL ================= */}
-<section className="w-full py-28 bg-gradient-to-b from-green-50 to-white">
+{/* ================= SECTION 3: GLOBAL STARTUP IMPACT ================= */}
+<section className="w-full py-32 bg-gradient-to-b from-green-50 to-white px-10">
 
-  {/* Heading */}
+  {/* ===== Section Header ===== */}
   <div className="text-center mb-16">
-    <h2 className="text-4xl font-extrabold text-green-800">
-      Platform Capabilities
+    <h2 className="text-4xl md:text-5xl font-extrabold text-green-800">
+      Global Startup Impact
     </h2>
-    <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-      Structured insights designed to understand startups beyond surface-level stories.
+    <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-lg">
+      Understanding how startups drive innovation, employment, and economic growth worldwide.
     </p>
   </div>
 
-  <AutoCarousel />
+  <div className="max-w-7xl mx-auto relative flex flex-col md:flex-row items-center gap-10">
 
+    {/* TEXT CARD (left overlapping on desktop) */}
+    <motion.div
+      initial={{ opacity: 0, x: -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="bg-white/95 backdrop-blur-md shadow-lg border border-green-100
+  p-8 w-full md:w-96
+  min-h-[420px] md:min-h-[480px]
+  flex flex-col justify-between
+  absolute md:relative
+  top-1/2 md:top-0
+  -translate-y-1/2 md:translate-y-0
+  md:-mr-24
+  z-20">
+      <h3 className="text-2xl md:text-3xl font-extrabold text-green-800 mb-4">
+        Startups as Economic Catalysts
+      </h3>
+      <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
+        Startups drive global innovation, create employment opportunities, and transform economies.
+        Learning about them inspires entrepreneurship and meaningful impact.
+      </p>
+      <Link
+        to="/gallery"
+        className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full text-base md:text-lg font-semibold transition transform hover:scale-105"
+      >
+        Explore Startup Stories
+      </Link>
+    </motion.div>
+
+    {/* IMAGE */}
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="flex-1 z-10"
+    >
+      <img
+        src={startupImpact}
+        alt="Global Startup Impact on Economy"
+        className="object-cover w-full h-[500px] md:h-[520px]" // increased height for better balance
+      />
+    </motion.div>
+
+  </div>
 </section>
 
 
