@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-r from-green-700 to-emerald-700 text-white mt-20">
-      
+   
+      <footer className="w-full bg-gradient-to-r from-green-700 to-emerald-700 text-white">
+
       <motion.div
         className="max-w-7xl mx-auto px-10 py-12 grid md:grid-cols-3 gap-10"
         initial={{ opacity: 0 }}
