@@ -53,8 +53,6 @@ export default function Contact() {
         </div>
       </nav>
 
-     
-
 
       {/* 🌿 Soft Animated Background Elements */}
 <motion.div

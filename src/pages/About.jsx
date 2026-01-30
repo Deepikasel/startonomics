@@ -49,7 +49,6 @@ export default function About() {
         </div>
       </nav>
 
-    
 
 {/* 🌿 Soft Animated Background Elements */}
 <motion.div
