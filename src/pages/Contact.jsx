@@ -53,15 +53,28 @@ export default function Contact() {
         </div>
       </nav>
 
-      {/* 🌈 Animated Background GIF */}
-      <motion.img
-        src="https://cdn.dribbble.com/users/195948/screenshots/15490915/media/ffbba20c05659abf8b090b85ef601dc7.gif"
-        alt="Startup Animation"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.25, scale: 1 }}
-        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute bottom-0 right-0 w-72 opacity-30"
-      />
+     
+
+
+      {/* 🌿 Soft Animated Background Elements */}
+<motion.div
+  className="absolute -top-24 -left-24 w-96 h-96 bg-green-300 rounded-full blur-3xl opacity-30"
+  animate={{ x: [0, 40, 0], y: [0, 30, 0] }}
+  transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+/>
+
+<motion.div
+  className="absolute top-1/3 -right-24 w-96 h-96 bg-emerald-400 rounded-full blur-3xl opacity-25"
+  animate={{ x: [0, -40, 0], y: [0, -30, 0] }}
+  transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+/>
+
+<motion.div
+  className="absolute bottom-0 left-1/4 w-72 h-72 bg-green-200 rounded-full blur-3xl opacity-20"
+  animate={{ y: [0, -25, 0] }}
+  transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+/>
+
 
       {/* 💬 Feedback Form Section */}
       <motion.div
